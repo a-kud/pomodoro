@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width:device-width, initial-scale=1" name="viewport">
+    <title>Pomodoro Clock</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <script src="js/pomodoro.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Pomodoro Timer</h1>
+        </header>
+        <div class="controls">
+            
+            <div class="break">
+                <h5 class="uppercase label">Break length</h5>
+                <div class="input" id="break">
+                    <button class="break-counter-btn" type="button">-</button>
+                    <div id="break-length"><span>5</span></div>
+                    <button class="break-counter-btn" type="button">+</button>
+                </div>
+            </div>
+            
+            <div class="session">
+                <h5 class="uppercase label">Session length</h5>
+                <div class="input" id="session">
+                    <button class="session-counter-btn">-</button>
+                    <div id="session-length"><span>30</span></div>
+                    <button class="session-counter-btn">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="timer-size" id="progressbar" onclick="countdownStart(document.querySelector('#session-length span').innerHTML * 60, document.querySelector('#break-length span').innerHTML * 60, document.querySelector('#time-left'));">
+            <div id="progressbar_back"></div>
+        
+            <div class="timer timer-size">
+                <header class="timer-header">
+                    <h2>Session</h2>
+                </header>
+                <div id="time-left">
+                    <script type="text/javascript">
+                        getSessionLength();
+                    </script>
+                </div>
+            </div>
+        </div> <!-- /#progressbar -->
+    </div>
+</body>
+</html>

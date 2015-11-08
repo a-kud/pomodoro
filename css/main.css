@@ -1,0 +1,107 @@
+body {
+    background-color: #333;
+}
+
+* {
+    color: snow;
+}
+
+h1, h2, h5 {
+    margin: 0px;
+}
+
+.wrapper, .break, .session {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    font-weight: 400;
+    font-size: 5em;
+}
+
+.break {
+    padding-right: 25px;
+}
+
+.session {
+    padding-left: 25px;
+}
+
+.controls, .input {
+    display: flex;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.label, .input, .break-counter-btn, .session-counter-btn, .timer, .timer-header h2{
+    font-family: 'Open Sans', 'Arial', sans;
+    font-weight: 400;
+}
+
+.label {
+    font-size: .8em;
+}
+
+.break-counter-btn, .session-counter-btn {
+    font-size: 2em;
+    background:none;
+    border:none;
+    cursor: pointer;
+}
+
+.input {
+    font-size: 1em;
+    align-items: center;    
+}
+
+.timer-size {
+    height: 300px;
+    width: 300px; 
+}
+
+#progressbar {
+    margin-top: 25px;
+    border: 2px solid lime;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    overflow: hidden;
+}
+
+#progressbar:hover {
+    cursor: pointer;
+}
+
+#progressbar:before {
+  content: " ";
+  border: 5px solid #333;
+  border-radius: 50%;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  position: absolute;
+}
+
+#progressbar_back {
+    width: inherit;
+    height: 5%; 
+    background-color: orange;
+}
+
+.timer {
+    font-size: 2.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+        
+}
