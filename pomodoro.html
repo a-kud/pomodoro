@@ -104,14 +104,14 @@
                 
                  function restart() {
                     if (this.expired()) {
+                        timer2.onTick(format(display)).start();
                         setTimeout(function () {timer1.start();}, (brk + 1) * 1000);
+                        
                     }
                 }
                 
                 timer1.onTick(format(display)).onTick(restart).start();
-                //setTimeout(function() {
-                //    timer2.onTick(format(display)).start();
-                //    }, session - 1 * 1000);
+                
             });
         };
     </script>
